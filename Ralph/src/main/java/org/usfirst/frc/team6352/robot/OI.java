@@ -13,6 +13,7 @@ package org.usfirst.frc.team6352.robot;
 //import org.usfirst.frc.team6352.robot.commands.ResetLiftEncoder;
 import org.usfirst.frc.team6352.robot.commands.SpinHead;
 //import org.usfirst.frc.team6352.robot.commands.SuckInOrSpitOutPowerCube;
+import org.usfirst.frc.team6352.robot.commands.SpinKey;
 
 //import edu.wpi.first.wpilibj.GenericHID.RumbleType;
 //import edu.wpi.first.wpilibj.Joystick;
@@ -62,20 +63,22 @@ public class OI {
 	// Buttons:
 	
 	// Give meaningful names to the game controller buttons:
-	public final static int gameControllerButtonA = 1;
-	public final static int gameControllerButtonX = 2;
+	public final static int gameControllerButtonA = 2;
+	public final static int gameControllerButtonX = 1;
 	public final static int gameControllerButtonB = 3;
 	public final static int gameControllerButtonY = 4;
 	public final static int gameControllerButtonBumperLeft = 5;
 	public final static int gameControllerButtonBumperRight = 6;
-	public final static int gameControllerButtonBack = 7;
-	public final static int gameControllerButtonStart = 8;
-	public final static int gameControllerButtonStickLeft = 9;
-	public final static int gameControllerButtonStickRight = 10;
+	public final static int gameControllerButtonBack = 11;
+	public final static int gameControllerButtonStart = 12;
+	public final static int gameControllerButtonStickLeft = 13;
+	public final static int gameControllerButtonStickRight = 14;
 	 
 
 	Button headSpinCCWButton = new JoystickButton(gameController, gameControllerButtonBumperLeft);
 	Button headSpinCWButton = new JoystickButton(gameController, gameControllerButtonBumperRight);
+	Button keyStartSpinningButton = new JoystickButton(gameController, gameControllerButtonX);
+	Button KeyStopSpinningButton = new JoystickButton(gameController, gameControllerButtonY);
 	
 	//Button powerCubeSuckButton = new JoystickButton(gameController, gameControllerButtonB);
 	//Button powerCubeSpitButton = new JoystickButton(gameController, gameControllerButtonX);
@@ -112,8 +115,11 @@ public class OI {
 	{
 		// Bind buttons to commands:
 
-		headSpinCCWButton.whileHeld(new SpinHead(0.125));
-		headSpinCWButton.whileHeld(new SpinHead(-0.125));
+		headSpinCCWButton.whileHeld(new SpinHead(.10));
+		headSpinCWButton.whileHeld(new SpinHead(-0.15));
+
+		keyStartSpinningButton.whileHeld(new SpinKey(true));
+		KeyStopSpinningButton.whileHeld(new SpinKey(false));
 
 		//powerCubeSuckButton.whileHeld(new SuckInOrSpitOutPowerCube(dashboardPowerCubeIntakeSuckSpeed));
 		//powerCubeSpitButton.whileHeld(new SuckInOrSpitOutPowerCube(dashboardPowerCubeIntakeSpitSpeed));

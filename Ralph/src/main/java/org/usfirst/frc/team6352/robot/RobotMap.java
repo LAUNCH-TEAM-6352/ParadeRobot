@@ -33,8 +33,8 @@ public class RobotMap
 	//public static final int leftIntakePwmChannel = 4;
 	//public static final int rightIntakePwmChannel = 3;
 	
-	// The PWM channel for the movement motors on the parade robot:
-	public static final int keyDrivePwmChannel = 2;
+	// The channels for the movement motors on the parade robot:
+	public static final int keyDriveRelayChannel = 0;
 	public static final int headDrivePwmChannel = 3;
 
 	// The CAN device ids for the power cube intake on the competition robot:

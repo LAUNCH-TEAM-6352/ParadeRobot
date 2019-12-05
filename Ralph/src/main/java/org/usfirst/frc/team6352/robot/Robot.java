@@ -16,6 +16,7 @@ import org.usfirst.frc.team6352.robot.subsystems.HeadMotor;
 //import org.usfirst.frc.team6352.robot.subsystems.PowerCubeLift;
 //import org.usfirst.frc.team6352.robot.subsystems.PowerCubeLiftEncoder;
 //import org.usfirst.frc.team6352.robot.subsystems.PowerCubeLiftPid;
+import org.usfirst.frc.team6352.robot.subsystems.KeyMotor;
 
 import edu.wpi.cscore.UsbCamera;
 import edu.wpi.cscore.UsbCameraInfo;
@@ -47,6 +48,7 @@ public class Robot extends TimedRobot
 	//public static final PowerCubeLift powerCubeLift = new PowerCubeLift();
 	//public static final PowerCubeLiftPid powerCubeLiftPid = new PowerCubeLiftPid();
 	public static final HeadMotor headMotor = new HeadMotor();
+	public static final KeyMotor keyMotor = new KeyMotor();
 
 	// Allows for access to operator interface components:
 	public static OI oi;
