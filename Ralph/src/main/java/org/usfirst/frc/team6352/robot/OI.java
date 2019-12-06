@@ -115,8 +115,8 @@ public class OI {
 	{
 		// Bind buttons to commands:
 
-		headSpinCCWButton.whileHeld(new SpinHead(.10));
-		headSpinCWButton.whileHeld(new SpinHead(-0.15));
+		headSpinCCWButton.whileHeld(new SpinHead(.2));
+		headSpinCWButton.whileHeld(new SpinHead(-.2));
 
 		keyStartSpinningButton.whileHeld(new SpinKey(true));
 		KeyStopSpinningButton.whileHeld(new SpinKey(false));
