@@ -3,7 +3,7 @@ package org.usfirst.frc.team6352.robot.commands;
 import org.usfirst.frc.team6352.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+//import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  * A command for controlling the power cube intake 

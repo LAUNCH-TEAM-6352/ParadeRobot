@@ -109,7 +109,7 @@ public class DriveTrain extends Subsystem
 	
 	public void driveTank(XboxController gameController)
 	{
-		drive.tankDrive((.7*gameController.getY(Hand.kLeft)), (.7*gameController.getRawAxis(3)));
+		drive.tankDrive((gameController.getY(Hand.kLeft)), (gameController.getRawAxis(3)));
 		//gameController.getY(Hand.kRight));
 		
 		/**

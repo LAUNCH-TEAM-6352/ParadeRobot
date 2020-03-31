@@ -19,8 +19,8 @@ import org.usfirst.frc.team6352.robot.subsystems.HeadMotor;
 import org.usfirst.frc.team6352.robot.subsystems.KeyMotor;
 
 import edu.wpi.cscore.UsbCamera;
-import edu.wpi.cscore.UsbCameraInfo;
-import edu.wpi.first.wpilibj.CameraServer;
+//import edu.wpi.cscore.UsbCameraInfo;
+//import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.GenericHID.Hand;
 import edu.wpi.first.wpilibj.RobotController;
@@ -98,8 +98,8 @@ public class Robot extends TimedRobot
 		
 		// Set up USB cameras.
 		// Do not delete the following line!
-		CameraServer.getInstance();
-		initializeUsbCameras();
+		//CameraServer.getInstance();
+		//initializeUsbCameras();
 		
 		SmartDashboard.putString("Autonomous", options[optionIndex]);
 	}
@@ -314,7 +314,7 @@ public class Robot extends TimedRobot
 	
 	/**
 	 * Starts up USB cameras, starting capture on each one.
-	 */
+	 
 	private void initializeUsbCameras()
 	{
 		UsbCameraInfo infos[] = UsbCamera.enumerateUsbCameras();
@@ -328,4 +328,5 @@ public class Robot extends TimedRobot
 			CameraServer.getInstance().startAutomaticCapture(usbCameras[i]);
 		}
 	}
+	**/
 }
